@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Add theme-color meta tag for browser UI integration -->
     <meta name="theme-color" content="#F5A697">
-    <title>Shafquat Tabeeb</title>
+    <title>Design tools I cannot live without - Shafquat Tabeeb</title>
     <!-- Import Lexend variable font and Roboto fonts from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -61,22 +61,10 @@
             overflow-x: hidden; /* Prevent horizontal scrolling during animations */
         }
         
-        .inline-icon {
-            height: 1.15em;  /* Keep the height large */
-            width: auto;     
-            transform: scaleX(1.05); /* Reduced from 1.2 to 1.05 - just slightly wider than normal */
-            transform-origin: center; /* Ensure scaling happens from the center */
-            vertical-align: middle;
-            margin: 0 0.2em 0 0.15em; /* Slightly increased margins for better spacing */
-            display: inline-block;
-            position: relative;
-            top: -0.08em; /* Adjusted to ensure vertical centering with text */
-        }
-        
         .container {
             max-width: 650px;
             margin: 0 auto;
-            padding: 6rem 1.5rem 1.5rem 1rem;
+            padding: 8rem 1.5rem 1.5rem 1rem;
         }
         
         /* Content */
@@ -110,10 +98,6 @@
             width: 100%;
             max-width: 650px;
             padding: 0 1.5rem;
-            /* Initial state for animation */
-            opacity: 0;
-            transform: translateY(-30px);
-            animation: slideDown var(--animation-duration) ease-out var(--animation-delay) forwards;
         }
         
 
@@ -158,148 +142,20 @@
             text-align: left; /* Left align the heading */
         }
         
-        p {
-            margin: 2rem 0 0.5rem 0;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            font-family: 'Roboto', sans-serif;
-            /* Initial state for animation */
-            opacity: 0;
-            transform: translateY(20px);
-            animation: slideUp var(--animation-duration) ease-out calc(var(--animation-delay) + 0.4s) forwards;
+        /* Coming Soon styling */
+        .coming-soon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vh;
         }
         
-        /* Projects section styling */
-        h2 {
-            font-size: 1.2rem;
-            font-weight: 400;
+        .coming-soon h1 {
+            font-size: 3rem;
+            font-weight: 700;
             font-family: 'Lexend', sans-serif;
-            margin: 0.5rem 0 0.10rem 0;
-            text-align: left;
-            /* Initial state for animation */
-            opacity: 0;
-            transform: translateY(20px);
-            animation: slideUp var(--animation-duration) ease-out calc(var(--animation-delay) + 0.6s) forwards;
-        }
-        
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 0.75rem;
-            margin-top: 0.001rem;
-            /* Initial state for animation */
-            opacity: 0;
-            transform: translateY(20px);
-            animation: slideUp var(--animation-duration) ease-out calc(var(--animation-delay) + 0.8s) forwards;
-        }
-        
-        /* Writing section styling */
-        .writing-section {
-            margin-top: 0.001rem;
-            /* Initial state for animation */
-            opacity: 0;
-            transform: translateY(20px);
-            animation: slideUp var(--animation-duration) ease-out calc(var(--animation-delay) + 1s) forwards;
-        }
-        
-        .writing-entry {
-            padding: 0.25rem 0;
-            text-decoration: none !important;
             color: var(--text);
-            display: inline-block;
-            transition: color 0.2s ease;
-            border-bottom: 1px dashed #ccc;
-        }
-        
-        .writing-entry:hover {
-            color: var(--link);
-            border-bottom: 1px dashed var(--link);
-        }
-        
-        .writing-entry:last-child {
-            border-bottom: 1px dashed #ccc;
-        }
-        
-        .writing-entry h3 {
-            font-size: 1.1rem;
-            font-weight: 400;
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            color: inherit;
-        }
-        
-        .writing-entry p {
-            font-size: 0.9rem;
-            line-height: 1.4;
-            margin: 0;
-            color: var(--text);
-            opacity: 0.7;
-            animation: none;
-            transform: none;
-        }
-        
-        .project-card {
-            background: var(--background);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 0.75rem;
-            text-decoration: none;
-            color: var(--text);
-            position: relative;
-            transition: all 0.2s ease;
-            display: block;
-        }
-        
-        .project-card:hover {
-            background-color: var(--accent);
-            border-color: var(--link);
-            transform: translateY(-2px);
-        }
-        
-        .project-card.placeholder {
-            cursor: default;
-            opacity: 0.6;
-        }
-        
-        .project-card.placeholder:hover {
-            background-color: var(--background);
-            border-color: var(--border);
-            transform: none;
-        }
-        
-        .project-content h3 {
-            font-size: 1rem;
-            font-weight: 400;
-            font-family: 'Lexend', sans-serif;
-            margin: 0 0 0.25rem 0;
-            color: var(--text);
-        }
-        
-        .project-content p {
-            font-size: 0.9rem;
-            line-height: 1.4;
-            margin: 0;
-            color: var(--text);
-            opacity: 0.8;
-            animation: none;
-            transform: none;
-        }
-        
-        .external-link-icon {
-            position: absolute;
-            top: 0.75rem;
-            right: 0.75rem;
-            width: 16px;
-            height: 16px;
-            stroke: var(--text);
-            stroke-width: 2;
-            fill: none;
-            opacity: 0.6;
-            transition: opacity 0.2s ease;
-        }
-        
-        .project-card:hover .external-link-icon {
-            opacity: 1;
+            text-align: center;
         }
         
         /* Links with smooth underline animation */
@@ -342,16 +198,6 @@
         
         /* Social icon links don't need underlines */
         .social-icons a::after {
-            display: none;
-        }
-        
-        /* Project card links don't need underlines */
-        .project-card::after {
-            display: none;
-        }
-        
-        /* Writing entry links don't need the traveling underline */
-        .writing-entry::after {
             display: none;
         }
         
@@ -483,6 +329,14 @@
             .social-icons {
                 gap: 1.2rem; /* Slightly reduce gap on smaller screens */
             }
+            
+            .blog-title {
+                font-size: 1.6rem;
+            }
+            
+            .blog-content {
+                font-size: 1rem;
+            }
         }
         
         @media (max-width: 640px) {
@@ -491,12 +345,12 @@
                 font-variation-settings: 'wght' 520;
             }
             
-            p {
-                font-size: 1rem; /* Adjusted for mobile */
-            }
-            
             .social-icons {
                 gap: 1rem;
+            }
+            
+            .blog-title {
+                font-size: 1.4rem;
             }
         }
         
@@ -532,8 +386,6 @@
                             </svg>
                         </a>
                         
-
-                        
                         <!-- Theme Toggle Button (Adjusted to match social icon size) -->
                         <button class="theme-toggle" aria-label="Toggle dark mode">
                             <div class="sun-moon-container">
@@ -559,35 +411,9 @@
                     </div>
                 </div>
             </div>
-            <p>Hello! I'm Shaf. I'm a rising senior at <img src="images/unsw-logo.png" alt="UNSW" class="inline-icon"><a href="https://www.unsw.edu.au/" target="_blank">UNSW</a> studying Computer Science. Outside of school and work, I enjoy making <a href="https://docs.google.com/document/d/1VPKoQ_jGT7IGbYOiIl23jXflw1vzLn5qsxilmnMTMQY/edit?usp=sharing" target="_blank">food reviews with friends</a>.</p>
             
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <a href="https://tabeebs.github.io/Beatle/" target="_blank" class="project-card">
-                    <div class="project-content">
-                        <h3>Beatle</h3>
-                        <p>Guess a Bangla song in 5 goes. Inspired by the NYT Wordle.</p>
-                    </div>
-                    <svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
-                    </svg>
-                </a>
-                <a href="https://tabeebs.github.io/type-test/" target="_blank" class="project-card">
-                    <div class="project-content">
-                        <h3>Type Test</h3>
-                        <p>Improve your typing speed with custom test durations.</p>
-                    </div>
-                    <svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
-                    </svg>
-                </a>
-            </div>
-            
-            <h2>Writing</h2>
-            <div class="writing-section">
-                <a href="design-tools.html" class="writing-entry">
-                    <h3>Design tools I use everyday</h3>
-                </a>
+            <div class="coming-soon">
+                <h1>Coming Soon</h1>
             </div>
         </main>
     </div>
@@ -616,4 +442,4 @@
         });
     </script>
 </body>
-</html>
+</html> 
